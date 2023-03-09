@@ -20,7 +20,11 @@ header {
     display: flex;
     justify-content: flex-end;
 }
+
 .header__btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     background-color: var(--btn__color);
     border: none;
     border-radius: 5px;
@@ -55,8 +59,11 @@ main .grid {
     width: 100%;
 }
 .card__userInfo {
+    font-size: smaller;
+    font-weight: lighter;
     display: flex;
     position: absolute;
+    align-items: center;
     background-color: var(--btn__color);
     color: whitesmoke;
     bottom:0;
@@ -98,6 +105,8 @@ span {
 
 .footer__section--start {
     flex-grow: 1;
+    display: flex;
+
 }
 .footer__section--center {
     display: flex;
@@ -106,5 +115,11 @@ span {
     flex-grow: 3;
 }
 .footer__section--end {
+    font-size: smaller;
     flex-grow: 1;
+    background-color: rgba(248, 55, 55, 0.889);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
