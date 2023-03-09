@@ -47,9 +47,14 @@ main .grid {
     height:100%;
 }
 .card {
+    overflow: hidden;
     object-fit: cover;
     position: relative;
     margin-bottom: 0.4em;
+    transition: 0.3s;
+}
+.card img:hover {
+    filter:grayscale(100)
 }
 .card img {
     width: 100%;
