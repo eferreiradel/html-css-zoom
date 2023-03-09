@@ -1,5 +1,6 @@
-:before {
+:root {
     font-size: 20px;
+    --btn__color: rgba(97, 97, 97, 0.398);
 }
 * {
     box-sizing: border-box;
@@ -7,17 +8,20 @@
     margin:0px;
 }
 body {
-    background-color: darkgreen;
+    background-color: black;
     margin: 0;
     padding: 0;
+    height: 100vh;
+}
+img {
+    display: block;
 }
 header {
-    background-color: aqua;
     display: flex;
     justify-content: flex-end;
 }
 .header__btn {
-    background-color: darkgray;
+    background-color: var(--btn__color);
     border: none;
     border-radius: 5px;
     color: white;
@@ -26,50 +30,81 @@ header {
     margin: 0.5em;
 }
 main {
-    background-color: orange;
+
+    position: absolute;
+    margin: auto;
     width: 100%;
-    height: 100vh;
+    height: calc (100vh -2em);
 }
 main .grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2em auto;
+    width:100%;
+    height:100%;
+    /* display: grid;  */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
 }
 .card {
+    object-fit: cover;
     position: relative;
-    background-image:url(https://picsum.photos/200/300);
-    background-position: center;
-    background-size: cover;
-    width:300px;
-    height:200px;
+    margin-bottom: 0.4em;
+}
+.card img {
+    width: 100%;
 }
 .card__userInfo {
-    padding: 0.2em; 
     display: flex;
-    bottom:0;
     position: absolute;
-    background-color: beige;
-
+    background-color: var(--btn__color);
+    color: whitesmoke;
+    bottom:0;
+    padding: 0.2em;    
+}
+.card__userInfo i {
+    font-size: 1em;
 }
 footer {
-    height: 90px;
-    background-color: darkgray;
-    color:white;
+    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(47, 47, 47);
+    bottom: 0;
+    width:100%;
 }
 .footer__btn {
+    font-size: smaller;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    color:whitesmoke;
+    padding:  0.5em 0.2em;
+    margin: 0.1em 0.2em;
 }
+.footer__btn:hover {
+    background-color: rgb(85, 85, 85);
+}
+span {
+    margin-top: 0.5em;
+}
+.fa-solid {
+    font-size: 1.5em;
+}
+.fa-share-from-square {
+    color: rgb(44, 255, 44);
+}
+
 .footer__section--start {
-    background-color: gray;
     flex-grow: 1;
 }
 .footer__section--center {
-    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     flex-grow: 3;
 }
 .footer__section--end {
-    background-color: gray;
     flex-grow: 1;
 }
