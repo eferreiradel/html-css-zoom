@@ -37,21 +37,23 @@ header {
 }
 main {
     position: absolute;
+    padding-top: 0.5em;
+    background-color: rgb(0, 0, 0);
     width: 100%;
 }
 main .grid {
+    gap: 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     width:100%;
-    height:100%;
+
 }
 .card {
     overflow: hidden;
     object-fit: cover;
     position: relative;
-    margin-bottom: 0.4em;
-    transition: 0.3s;
+    transition: (3s);
 }
 .card img:hover {
     filter:grayscale(100)
@@ -71,17 +73,21 @@ main .grid {
     padding: 0.2em;    
 }
 .card__userInfo:hover {
-    background-color: rgba(186, 186, 186, 0.475);
+    background-color: rgba(116, 155, 213, 0.475);
+    color: black;
+    font-weight: bolder;
 }
 .card__userInfo i {
     font-size: 1em;
 }
 footer {
+    text-align: center;
     position: absolute;
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(47, 47, 47);
+    align-items: center;
+    background-color: rgb(43, 43, 43);
     bottom: 0;
     width:100%;
 }
@@ -95,7 +101,7 @@ footer {
     margin: 0.1em 0.2em;
 }
 .footer__btn:hover {
-    background-color: rgb(85, 85, 85);
+    background-color: rgb(91, 91, 91);
 }
 span {
     margin-top: 0.5em;
@@ -113,21 +119,28 @@ span {
 
 }
 .footer__section--center {
+    flex-grow: 3;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-grow: 3;
 }
 .footer__section--end {
+    background-color: rgb(237, 35, 35);
+    flex-grow: 1;   
     font-size: smaller;
-    flex-grow: 1;
-    background-color: rgba(214, 26, 26, 0.889);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.5s;
 }
+
+/* .footer__section--end span {
+    background-color: red;
+    border-radius: 25px;
+    padding: 1em;
+
+} */
 .footer__section--end:hover {
     background-color: rgb(252, 18, 18);
 }
